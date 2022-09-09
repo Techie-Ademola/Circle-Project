@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>speaker pro</title>
+    <style>
+        .occ {
+            display: flex;
+        }
+        .occ {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: black;
+        }
+        .speak1{
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background-color: black;
+            border: 5px solid #5dbcf9;
+        }
+        .speak2{
+            position: absolute;
+            top: 8%;
+            left: 8%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: black;
+            border: 5px solid #5dbcf9;
+        }
+        .speak3{
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: black;
+            border: 5px solid #5dbcf9;
+        }
+        .hold {
+            position: absolute;
+            /* border: 1px dashed white; */
+            top: -25%;
+            left: -45%;
+            height: 150px;
+            width: 100px;
+            background-color: black;
+        }
+        .holder {
+            width: 0;
+            height: 0;
+            transform: rotate(-90deg);
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            border-bottom: 100px solid #5dbcf9;
+            position: absolute;
+            top: 0%;
+            left: -73%;
+            /* transform: translate(-50%, -60%); */
+            z-index: 100;
+        }
+        .bottom {
+            position: absolute;
+            top: 30%;
+            left: -65%;
+            border-radius: 5px;
+            height: 40px;
+            width: 50px;
+            background-color: #5dbcf9;
+        }
+        .retina {
+            position: relative;
+            left: 35%;
+            top: 30%;
+            width: 150px;
+            height: 150px;
+            transform: rotate(135deg);
+            border-radius: 0% 50% 0% 50%;
+            background-color: #998235;
+        }
+        .iris {
+            position: absolute;
+            top: 6%;
+            left: 6%;
+            border-radius: 50%;
+            height: 130px;
+            width: 130px;
+            background: #082429;
+        }
+        .pupil {
+            position: absolute;
+            top: 12%;
+            left: 12%;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            background: #082429;
+            border: 35px solid #f3ac3c;
+        }
+        .inv {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color:#082429;
+        }
+        .vein {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color:#1a4341;
+            overflow: hidden;
+        }
+        .verse {
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            width: 20%;
+            height: 15px;
+            background: #f3ac3c;
+            box-shadow: 
+            0 0 0 15px #1a4341,
+            0 0 0 30px #f3ac3c,
+            0 0 0 45px #1a4341,
+            0 0 0 60px #f3ac3c;
+        }
+        .circle-1 {
+            position: absolute;
+            top: 23%;
+            left: 16%;
+            /* border: 2px solid white; */
+            border-radius: 50%;
+            height: 150px;
+            width: 100px;
+            background: #1a4341;
+        }
+        .circle-2 {
+            position: absolute;
+            top: 23%;
+            left: 58%;
+            /* border: 2px solid white; */
+            border-radius: 50%;
+            height: 150px;
+            width: 100px;
+            background: #1a4341;
+        }
+        .vein-2 {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color:lightgray;
+            overflow: hidden;
+        }
+        .vero-1{
+            position: absolute;
+            left: 60%;
+            top: 40%;
+            border-radius: 0 8px 70px 70px;
+            width: 50px;
+            height: 70px;
+            background: navy;
+        }
+        .omovero {
+            position: absolute;
+            left: 15%;
+            top: -65%;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            background: navy;
+            /* border: 2px solid white; */
+        }
+
+        .vero-2 {
+            position: absolute;
+            left: 45%;
+            top: 40%;
+            border-radius: 0 0 70px 70px;
+            width: 75px;
+            height: 90px;
+            background:cornflowerblue;
+        }
+        .omovero-2 {
+            position: absolute;
+            left: 18%;
+            top: -65%;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background: cornflowerblue;
+            /* border: 2px solid white; */
+        }
+        .vero-3 {
+            position: absolute;
+            left: 33%;
+            top: 35%;
+            border-radius: 5px;
+            width: 80px;
+            height: 80px;
+            background:navy;
+            color: white;
+            text-align: center;
+            /* padding: 50px; */
+            font-size: 60px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .slack-bg {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: wheat;
+            /* overflow: hidden; */
+        }
+        .slack-1 {
+            position: absolute;
+            top: 40%;
+            left: 21%;
+            width: 70px;
+            height: 30px; 
+            border-radius: 50px;
+            background: cornflowerblue;
+        }
+        .slack-2 {
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            width: 30px;
+            height: 70px; 
+            border-radius: 50px;
+            background: forestgreen;
+        }
+        .slack-3 {
+            position: absolute;
+            top: 49%;
+            left: 31%;
+            width: 30px;
+            height: 70px; 
+            border-radius: 50px;
+            background: crimson;
+        }
+        .slack-4 {
+            position: absolute;
+            top: 49%;
+            left: 40%;
+            width: 70px;
+            height: 30px; 
+            border-radius: 50px;
+            background: orange;
+        }
+        .slack-5 {
+            position: absolute;
+            top: 31%;
+            left: 31%;
+            width: 30px;
+            height: 30px; 
+            border-radius: 50px 50px 0 50px;
+            background: cornflowerblue;
+        }
+        .slack-6 {
+            position: absolute;
+            top: 40%;
+            left: 49%;
+            width: 30px;
+            height: 30px; 
+            border-radius: 50px 50px 50px 0;
+            background: forestgreen;
+        }
+        .slack-7 {
+            position: absolute;
+            top: 58%;
+            left: 40%;
+            width: 30px;
+            height: 30px; 
+            border-radius: 0 50px 50px 50px;
+            background: orange;
+        }
+        .slack-8 {
+            position: absolute;
+            top: 49%;
+            left: 22%;
+            width: 30px;
+            height: 30px; 
+            border-radius: 50px 0 50px 50px;
+            background: crimson;
+        }
+        .zoom-bg {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: blue;
+            overflow: hidden;
+        }
+        .zoom-1 {
+            position: absolute;
+            top: 30%;
+            left: 27%;
+            width: 120px;
+            height: 80px;
+            border-radius: 10px 25px;
+            background: white;
+            border: 5px solid blue;
+            z-index: 10;
+        }
+        .zoom-2 {
+            position: absolute;
+            top: 36%;
+            left: 51%;
+            width: 0;
+            height: 0;
+            /* border-top: 35px solid white; */
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 45px solid white;
+            transform: rotate(-90deg);
+            border-radius: 7px;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="occ">
+        <div class="speak1">
+            <div class="speak2">
+                <div class="speak3"></div>
+                <div class="hold"></div>
+                <div class="holder"></div>
+                <div class="bottom"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="inv">
+        <div class="retina">
+            <div class="iris">
+                <div class="pupil"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="vein">
+        <div class="verse"></div>
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+    </div>
+
+    <div class="vein-2">
+        <div class="vero-1">
+            <div class="omovero"></div>
+        </div>
+        <div class="vero-2">
+            <div class="omovero-2"></div>
+        </div>
+        <div class="vero-3">T</div>
+    </div>
+    
+    <div class="slack-bg">
+        <div class="slack-1"></div>
+        <div class="slack-2"></div>
+        <div class="slack-3"></div>
+        <div class="slack-4"></div>
+        <div class="slack-5"></div>
+        <div class="slack-6"></div>
+        <div class="slack-7"></div>
+        <div class="slack-8"></div>
+    </div>
+
+    <div class="zoom-bg">
+        <div class="zoom-1"></div>
+        <div class="zoom-2"></div>
+    </div>
+</body>
+</html>
